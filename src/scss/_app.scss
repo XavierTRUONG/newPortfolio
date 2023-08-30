@@ -1,0 +1,29 @@
+// PAGES
+
+@import './pages/notFound';
+@import './pages/homepage';
+
+// HELPERS
+
+@import './helpers/variables';
+@import './helpers/reset';
+
+// COMPONENTS
+
+@import './components/navbar';
+@import './components/banner';
+@import './components/home';
+@import './components/about';
+@import './components/experience';
+@import './components/contact';
+@import './components/skill';
+
+
+
+body {
+    background: #000000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
