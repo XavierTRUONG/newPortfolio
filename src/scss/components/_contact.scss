@@ -10,8 +10,8 @@
     > h2 {
         text-align: center;
         font-size: 160px;
-        background-color: #434041;
-        background-image: linear-gradient(180deg, #434041 9%, #000000 78%);        
+        background-color: var(--background-theme);
+        background-image: var(--background-gradient-theme);        
         background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 3rem;

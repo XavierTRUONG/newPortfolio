@@ -1,6 +1,7 @@
-import Banner from '../../components/Banner/Banner';
-import Navbar from '../../components/NavBar/Navbar';
-import photoProfil from '../../images/profil-image.png';
+import Banner from '../Banner/Banner';
+import Navbar from '../NavBar/Navbar';
+import photoProfilDark from '../../images/profil-dark.png';
+import photoProfilLight from '../../images/profil-light.png';
 import logoLinkedin from '../../images/logo-linkedin.svg';
 import logoGithub from '../../images/logo-github.svg';
 
@@ -11,22 +12,23 @@ const Home = () => {
         <Banner/>
         <div className='home__content'>
             <div className='home__content--text'>
-            <div>
-                <h2>HI ! I am Xavier,</h2>
-                <h1>DEVELOPER JUNIOR</h1>
+                <div className='containerTitle'>
+                    <h1 className='fade-in-bottom'>HI ! I am Xavier,</h1>
+                    <h2 className='fade-in-bottom'>DEVELOPER JUNIOR</h2>
+                </div>
+                <a href='#contact' className='contactButton bounce-top'>
+                    CONTACT ME
+                </a>
             </div>
-            <div className='contactButton'>
-                CONTACT ME
-            </div>
-            </div>
-            <div className='home__content--image'>
-            <img src={photoProfil} alt="" />
+            <div className='home__content--image fade-in-bottom'>
+                <img src={photoProfilDark} alt="photo de profil"/>
+                <img src={photoProfilLight} alt="photo de profil"/>
             </div>
             <div className='home__content--logos'>
-            <a href="https://www.linkedin.com/in/xavier-truong/">
+            <a className='bounce-top' href="https://www.linkedin.com/in/xavier-truong/">
                 <img src={logoLinkedin} alt="logo Linkedin"/>
             </a>
-            <a href="https://github.com/XavierTRUONG">
+            <a className='bounce-top' href="https://github.com/XavierTRUONG">
                 <img src={logoGithub} alt="logo Github"/>
             </a>
             </div>

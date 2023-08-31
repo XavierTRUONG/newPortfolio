@@ -1,9 +1,9 @@
-import LogoPortfolio from '../../images/logoPorfolio.svg'
-import buttonTheme from '../../images/dark-theme-button.svg'
+import LogoPortfolio from '../../images/logoPorfolio.svg';
+import DarkMode from '../DarkMode/DarkMode';
 
 const Navbar = () => {
   return (
-    <div className='navbar'>
+    <div className='navbar fade-in-top'>
         <div className='navbar__logo'>
             <img src={LogoPortfolio} alt="logo" />
             <p>TRUONG</p>
@@ -14,9 +14,7 @@ const Navbar = () => {
             <a href='#experience'>EXPERIENCE</a>
             <a href='#skill'>SKILL</a>
         </div>
-        <div className='navbar__theme'>
-            <img src={buttonTheme} alt="dark theme button" />
-        </div>
+        <DarkMode/>
     </div>
   )
 }

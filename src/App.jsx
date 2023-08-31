@@ -5,12 +5,12 @@ import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   return (
-    <>
+    <div className='App'>
       <Routes>
         <Route path="/" element={<Homepage/>} />
         <Route path="/*" element={<NotFound/>} />
       </Routes>
-    </>
+    </div>
   );
 }
 

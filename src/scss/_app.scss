@@ -7,6 +7,8 @@
 
 @import './helpers/variables';
 @import './helpers/reset';
+@import './helpers/theme';
+@import './helpers/animation';
 
 // COMPONENTS
 
@@ -17,13 +19,3 @@
 @import './components/experience';
 @import './components/contact';
 @import './components/skill';
-
-
-
-body {
-    background: #000000;
-}
-
-html {
-    scroll-behavior: smooth;
-}

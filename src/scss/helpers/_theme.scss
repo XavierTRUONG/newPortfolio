@@ -1,0 +1,22 @@
+:root {
+    --font-color-default: #434041;
+    --background-default: #FFFFFF;
+    --background-theme: #1D89FF;
+    --background-gradient-theme: linear-gradient(180deg, #1D89FF 0%, #FFFFFF 80%);
+    --display-light: block;
+    --display-dark: none;
+}
+
+[data-theme="dark"] {
+    --font-color-default: #FFFFFF;
+    --background-default: #000000;
+    --background-theme: #434041;
+    --background-gradient-theme: linear-gradient(180deg, #434041 9%, #000000 78%);
+    --display-light: none;
+    --display-dark: block;
+}
+
+body {
+    background: var(--background-default);
+    color: var(--font-color-default);
+}
