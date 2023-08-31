@@ -32,16 +32,21 @@ html {
             > * {
                 &:first-child {
                     margin-top: 3rem;
-                    font-family: Titan One;
 
                     > h1 {
-                        font-size: 45px;
-                        font-weight: 500;
+                        font-size: 50px;
+                        font-family: Titan One;
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        background-size: cover;
+                        color: transparent;
+                        background-image: url(../../images/background-text.png);
                     }
 
                     > h2 {
                         font-size: 20px;
                         font-weight: 300;
+                        font-family: Montserrat;
                     }
                 }
             }
