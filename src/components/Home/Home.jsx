@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import Banner from '../Banner/Banner';
 import Navbar from '../NavBar/Navbar';
 import photoProfilDark from '../../images/profil-dark.png';
