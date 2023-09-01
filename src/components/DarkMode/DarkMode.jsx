@@ -21,7 +21,6 @@ if (defaultDark) {
   setDark();
 }
 
-// 5
 const toggleTheme = (e) => {
   if (e.target.checked) {
     setDark();

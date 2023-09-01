@@ -36,17 +36,14 @@ html {
                     > h1 {
                         font-size: 50px;
                         font-family: Titan One;
-                        background-clip: text;
-                        -webkit-background-clip: text;
-                        background-size: cover;
-                        color: transparent;
-                        background-image: url(../../images/background-text.png);
+                        color: var(--font-color-default);
                     }
 
                     > h2 {
                         font-size: 20px;
                         font-weight: 300;
                         font-family: Montserrat;
+                        color: #FF474A;
                     }
                 }
             }

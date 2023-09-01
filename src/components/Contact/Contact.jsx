@@ -1,30 +1,24 @@
 import LogoMail from '../../images/mail.svg';
 import LogoPhone from '../../images/phone.svg';
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 
 const Contact = () => {
-    const [isIntersecting, setIsIntersecting] = useState(false);
     const title = useRef(null);
   
     useEffect(() => {
       const observer = new IntersectionObserver(
         ([entry]) => {
-          setIsIntersecting(entry.isIntersecting);
+          if (entry.isIntersecting) {
+            title.current.classList.add('fade-in-bottom');
+          } else {
+            title.current.classList.remove('fade-in-bottom');
+          }
         }, { threshold: 1 }
       );
 
       observer.observe(title.current);
-
-      if (isIntersecting) {
-        title.current.style.display = 'inline-block';
-        console.log(title.current.style.display);
-      } else {
-        title.current.style.display = 'none';
-        console.log(title.current.style.display);
-      }
-  
       return () => observer.disconnect();
-    }, [isIntersecting]);
+    }, []);
     
   return (
     <section id='contact' className="contact">

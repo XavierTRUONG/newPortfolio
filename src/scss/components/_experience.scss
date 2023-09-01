@@ -17,6 +17,7 @@
     }
 
     &--card {
+        position: relative;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -25,6 +26,7 @@
         height: 80px;
         background: #434041;
         color: #FFFFFF;
+        overflow: hidden;
         animation-name: floating;
         animation-duration: 3s;
         animation-iteration-count: infinite;
@@ -36,8 +38,19 @@
             to   { transform: translate(0, -0px); }
         }
 
+        .bubble {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 35px;
+            height: 35px;
+            border-radius:  0 0 400px 0 ;
+            transition: all .7s cubic-bezier(0,0,.5,1);
+        }
+
         .smokeland {
             background: #1D89FF;
+            color: #000000;
         }
 
         .keystone {
@@ -50,13 +63,12 @@
         }
 
         > * {
-            &:first-child {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 70px;
-                height: 70px;
-                border-radius: 50%;
+            z-index: 1;
+
+            &:nth-child(2) {
+                font-size: 17px;
+                font-weight: bold;
+                font-family: Titan One;
             }
 
             &:last-child {
@@ -67,14 +79,28 @@
         }
     }
 
+    &--card:hover {
+        .bubble {
+            width: 400px;
+            height: 400px;
+        }
+    }
+
     > * {
         &:nth-child(2) {
             justify-self: flex-end;
             grid-area: 2 / 1 / span 1 / span 1;
         }
+
         &:nth-child(3) {
             grid-area: 3 / 2 / span 1 / span 1;
         }
+
+        &:nth-child(3):hover {
+            grid-area: 3 / 2 / span 1 / span 1;
+            color: #434041;
+        }
+
         &:nth-child(4) {
             justify-self: flex-end;
             grid-area: 4 / 1 / span 1 / span 1;
