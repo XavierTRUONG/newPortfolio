@@ -11,7 +11,7 @@
         text-align: center;
         font-size: 160px;
         background-color: var(--background-theme);
-        background-image: var(--background-gradient-theme);        
+        background-image: var(--background-gradient-theme-about);        
         background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 3rem;
@@ -25,33 +25,20 @@
      
     > * {
         &:nth-child(3) {
-            background-image: linear-gradient(to right, #1D89FF 0%, #12D8FA  51%, #1FA2FF  100%);
-            background-size: 200% auto;
+            background: #1D89FF;
             margin-bottom: 3rem;
             transition: 0.5s;
         }
-
-        &:nth-child(3):hover {
-            background-position: right center; /* change the direction of the change here */
-            color: #fff;
-            text-decoration: none;
-        }
-
+         
         &:last-child {
-            background-image: linear-gradient(to right, #FF474A 0%, #F45C43  51%, #EB3349  100%);
-            background-size: 200% auto;
+            background: #1D89FF;
             margin-bottom: 3rem;
             transition: 0.5s;
-        }
-
-        &:last-child:hover {
-            background-position: right center; /* change the direction of the change here */
-            color: #fff;
-            text-decoration: none;
         }
     }
 
     &--card {
+        position: relative;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -60,12 +47,36 @@
         height: 80px;
         color: #FFFFFF;
         padding: 1rem;
+        overflow: hidden;
+
+
+        .bulle {
+            position: absolute;
+            width: 40px;
+            height: 80px;
+            top: 0;
+            left: -15%;
+            background: #FF474A;
+            transition: all .3s cubic-bezier(0,0,.5,1);
+        }
 
         > * {
-            &:first-child {
+            &:nth-child(2) {
                 width: 30px;
                 margin-right: 1rem;
+                z-index: 1;
             }
+            &:last-child {
+                z-index: 1;
+            }
+        }
+    }
+
+    &--card:hover {
+        transform: scale(1.1);
+
+        .bulle {
+            width: 400px;
         }
     }
 }

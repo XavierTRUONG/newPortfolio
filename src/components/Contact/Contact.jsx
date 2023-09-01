@@ -25,6 +25,7 @@ const Contact = () => {
         <h2>CONTACT</h2>
         <h3 ref={title}>INTERRESTING BY MY PROFIL ? DO NOT HESITATE TO CONTACT ME !</h3>
         <div className="contact--card">
+            <div className='bulle'></div>
             <img src={LogoMail} alt="logo mail" />
             <div>
                 <h4>CHAT WITH ME</h4>
@@ -32,6 +33,7 @@ const Contact = () => {
             </div>
         </div>
         <div className="contact--card">
+            <div className='bulle'></div>
             <img src={LogoPhone} alt="logo phone" />
             <div>
                 <h4>CALL ME</h4>

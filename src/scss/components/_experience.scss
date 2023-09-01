@@ -11,7 +11,7 @@
         text-align: center;
         font-size: 160px;
         background-color: var(--background-theme);
-        background-image: var(--background-gradient-theme);  
+        background-image: var(--background-gradient-theme-xp);
         background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -27,16 +27,6 @@
         background: #434041;
         color: #FFFFFF;
         overflow: hidden;
-        animation-name: floating;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-
-        @keyframes floating {
-            from { transform: translate(0,  0px); }
-            65%  { transform: translate(0, 15px); }
-            to   { transform: translate(0, -0px); }
-        }
 
         .bubble {
             position: absolute;
